@@ -1,3 +1,5 @@
-# todo: add your openai api key
+import os
 
-apikey = "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"
+apikey = os.getenv("OPENAI_API_KEY")
+if not apikey:
+    raise RuntimeError("Set OPENAI_API_KEY in your environment before running the OpenAI example.")
